@@ -1326,3 +1326,140 @@ https://templatemo.com/tm-593-personal-shape
 .service-details p.active {
     display: block;
 }
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Service Details Styles for Smooth Animation */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.95);
+    display: none; /* hidden by default */
+    padding: 2rem;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.service-details.active {
+    display: flex;
+    opacity: 1;
+}
+
+.service-details p {
+    display: none;
+    margin-top: 2rem;
+}
+
+.service-details p.active {
+    display: block;
+}
+
+/* Close Button Styles */
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Deepseek changes */
+
+
+/* Service Details Overlay */
+.service-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+.service-details.active {
+    display: flex;
+}
+
+.service-details p {
+    display: none;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.service-details p.active {
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 11;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.portfolio-item {
+    position: relative;
+}
+
+

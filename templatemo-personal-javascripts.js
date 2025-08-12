@@ -1,8 +1,3 @@
-/*
-TemplateMo 593 personal shape
-https://templatemo.com/tm-593-personal-shape
-*/
-
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu functionality
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
@@ -43,8 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // *** FIX FOR MISSING SECTIONS ***
-    // Intersection Observer for fade-in and slide animations
+    // Intersection Observer for animations
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -65,31 +59,47 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // *** SERVICE DETAILS FUNCTIONALITY ***
-    const techTags = document.querySelectorAll('.tech-tag');
-    
-    techTags.forEach(tag => {
+    // Service Details Functionality
+    document.querySelectorAll('.tech-tag').forEach(tag => {
         tag.addEventListener('click', function(e) {
             e.preventDefault();
-
-            const container = this.closest('.portfolio-item');
-            const detailsContainer = container.querySelector('.service-details');
+            
+            const portfolioItem = this.closest('.portfolio-item');
+            const detailsContainer = portfolioItem.querySelector('.service-details');
             const targetId = this.dataset.target;
             const targetParagraph = detailsContainer.querySelector(`#${targetId}`);
+            
+            // Close any open service details
+            document.querySelectorAll('.service-details').forEach(container => {
+                container.classList.remove('active');
+            });
+            
+            // Hide all paragraphs in this container
+            detailsContainer.querySelectorAll('p').forEach(p => {
+                p.classList.remove('active');
+            });
+            
+            // Show the selected paragraph
+            targetParagraph.classList.add('active');
+            
+            // Show the details container
+            detailsContainer.classList.add('active');
+        });
+    });
 
-            const allParagraphs = detailsContainer.querySelectorAll('p');
-            const isParagraphActive = targetParagraph.classList.contains('active');
+    // Close button functionality
+    document.querySelectorAll('.close-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.closest('.service-details').classList.remove('active');
+        });
+    });
 
-            // Hide all other paragraphs
-            allParagraphs.forEach(p => p.classList.remove('active'));
-
-            // If the same tag is clicked again, hide the entire details container
-            if (isParagraphActive) {
-                detailsContainer.classList.remove('active');
-            } else {
-                // Otherwise, show the container and the clicked paragraph
-                detailsContainer.classList.add('active');
-                targetParagraph.classList.add('active');
+    // Close service details when clicking outside content
+    document.querySelectorAll('.service-details').forEach(container => {
+        container.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
             }
         });
     });
