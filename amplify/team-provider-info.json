@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-neuranetwebsitefinal-dev-f785c-authRole",
+      "UnauthRoleArn": "arn:aws:iam::087000170276:role/amplify-neuranetwebsitefinal-dev-f785c-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::087000170276:role/amplify-neuranetwebsitefinal-dev-f785c-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-neuranetwebsitefinal-dev-f785c-deployment",
+      "UnauthRoleName": "amplify-neuranetwebsitefinal-dev-f785c-unauthRole",
+      "StackName": "amplify-neuranetwebsitefinal-dev-f785c",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:087000170276:stack/amplify-neuranetwebsitefinal-dev-f785c/cdf9c8a0-7819-11f0-b890-067f7b88c6b3",
+      "AmplifyAppId": "dks8nipthak92"
+    },
+    "categories": {
+      "function": {
+        "contactFormFunction": {
+          "m365ClientId": "placeholder",
+          "m365TenantId": "placeholder",
+          "m365ClientSecret": "placeholder",
+          "toEmailAddress": "support@neuranet.com.au",
+          "fromEmailAddress": "support@neuranet.com.au",
+          "secretsPathAmplifyAppId": "dks8nipthak92",
+          "deploymentBucketName": "amplify-neuranetwebsitefinal-dev-f785c-deployment",
+          "s3Key": "amplify-builds/contactFormFunction-6759727451783459636d-build.zip"
+        }
+      },
+      "api": {
+        "ContactFormApi": {}
+      }
+    }
+  }
+}

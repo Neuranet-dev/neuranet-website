@@ -1,0 +1,29 @@
+{
+  "permissions": {},
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "m365ClientId",
+      "environmentVariableName": "M365_CLIENT_ID"
+    },
+    {
+      "cloudFormationParameterName": "m365TenantId",
+      "environmentVariableName": "M365_TENANT_ID"
+    },
+    {
+      "cloudFormationParameterName": "m365ClientSecret",
+      "environmentVariableName": "M365_CLIENT_SECRET"
+    },
+    {
+      "cloudFormationParameterName": "toEmailAddress",
+      "environmentVariableName": "TO_EMAIL_ADDRESS"
+    },
+    {
+      "cloudFormationParameterName": "fromEmailAddress",
+      "environmentVariableName": "FROM_EMAIL_ADDRESS"
+    }
+  ],
+  "secretNames": [
+    "neuranetwebsite_m365creds"
+  ]
+}
